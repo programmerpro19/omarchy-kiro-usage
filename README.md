@@ -13,7 +13,7 @@ Shows Kiro CLI token usage and credit-quota limits in the Omarchy bar's agents w
 ## Install
 
 ```bash
-git clone <this-repo> && cd omarchy-kiro-usage && ./install.sh
+git clone https://github.com/programmerpro19/omarchy-kiro-usage && cd omarchy-kiro-usage && ./install.sh
 ```
 
 Requires: Omarchy, `kiro-cli` logged in (`kiro-cli login`).
