@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh Kiro CLI usage record for Omarchy agents widget
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'set -e; D="${XDG_STATE_HOME:-$HOME/.local/state}/omarchy/agents/usage"; mkdir -p "$D"; T=$(mktemp "$D/.kiro.XXXXXX"); "$HOME/.local/bin/omarchy-agent-usage-kiro" > "$T"; mv "$T" "$D/kiro.json"'
